@@ -1,5 +1,5 @@
 import { Redirect, Stack } from 'expo-router';
-import { Button, Image, StyleSheet, Text } from 'react-native';
+import { Image, Text, View } from 'react-native';
 import { useSession } from '../../contexts/session';
 
 export const unstable_settings = {
@@ -8,7 +8,9 @@ export const unstable_settings = {
 
 function LogoTitle() {
   return (
-    <Image style={styles.image} source={{ uri: 'https://reactnative.dev/img/tiny_logo.png' }} />
+    <View className='flex justify-center p-6'>
+      <Image className='w-[24px] h-[24px] m-auto' source={{ uri: 'https://reactnative.dev/img/tiny_logo.png' }} />
+    </View>
   );
 }
 
@@ -22,24 +24,17 @@ export default function Layout() {
     <Stack
       initialRouteName='home'
       screenOptions={{
+        header: () => <LogoTitle />,
         headerRight: null,
         headerTintColor: '#fff',
         headerStyle: { backgroundColor: '#fff' },
         headerTitleStyle: { fontWeight: 'bold' },
-        headerTitle: () => <LogoTitle />,
       }}
     >
       <Stack.Screen name='home' />
       <Stack.Screen name='network' />
-      <Stack.Screen name='about' options={{ presentation: 'modal' }} />
-      <Stack.Screen name='profile' options={{ presentation: 'modal' }} />
+      <Stack.Screen name='about' options={{ presentation: 'modal', headerShown: false }} />
+      <Stack.Screen name='profile' options={{ presentation: 'modal', headerShown: false }} />
     </Stack>
   );
 }
-
-const styles = StyleSheet.create({
-  image: {
-    width: 24,
-    height: 24,
-  },
-});
