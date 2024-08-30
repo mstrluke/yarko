@@ -1,10 +1,14 @@
 import { Pressable, PressableProps, Text } from 'react-native'
 
-export type ButtonProps = { children: string, fullW?: boolean } & PressableProps;
+export type ButtonProps = {
+  children: string;
+  fullW?: boolean;
+  textClassName?: string;
+} & PressableProps;
 
-const Button = ({ children, fullW = false, ...props }: ButtonProps) => (
-  <Pressable {...props}>
-    <Text className={`px-6 py-4 bg-[#F8B800] text-center text-md rounded-lg text-black mx-auto font-semibold ${fullW ? 'w-full' : 'w-auto'}`}>
+const Button = ({ children, className, textClassName, fullW = false, ...props }: ButtonProps) => (
+  <Pressable {...props} className={`px-6 py-4 bg-[#F8B800] rounded-lg text-black mx-auto ${fullW ? 'w-full' : 'w-auto'} ${className}`}>
+    <Text className={`text-center text-md font-semibold ${textClassName}`}>
       {children}
     </Text>
   </Pressable>

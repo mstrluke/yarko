@@ -9,7 +9,7 @@ const Home = () => {
   const handlePressAbout = () => router.push('/about');
 
   return (
-    <ScrollView>
+    <ScrollView className='bg-white'>
       <View className='flex flex-col gap-6 px-4 pb-20'>
         <View className='flex items-center justify-center relative rounded-full m-auto'>
           <Svg width="180" height="180" viewBox="0 0 180 180" className="-rotate-90">
@@ -47,7 +47,7 @@ const Home = () => {
           </View>
         </View>
 
-        <View className='shadow-md shadow-gray-300 rounded-xl p-4 flex flex-col gap-4'>
+        <View className='shadow-md shadow-gray-300 bg-white rounded-xl p-4 flex flex-col gap-4'>
           <Text className='font-semibold text-lg'>Travel Lifestyle</Text>
           <Text className='text-md mb-4'>Получай пассивный доход вместе с клубом путешественников</Text>
           <Button fullW onPress={handlePressAbout}>Узнать больше</Button>
