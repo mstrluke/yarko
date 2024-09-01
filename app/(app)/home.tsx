@@ -5,7 +5,7 @@ import Button from '../../components/button';
 
 const tasks = [
   { title: 'Запостить сторис про нас', point: 345 },
-  { title: 'Лайкни хуемое', point: 345 },
+  { title: 'Лайкнуть и репостнуть', point: 345 },
   { title: 'Купить кроссовки', brand: 'puma', point: 345 },
 ];
 

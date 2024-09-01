@@ -22,6 +22,8 @@ export default function Layout() {
           headerTintColor: '#fff',
           headerStyle: { backgroundColor: '#fff' },
           headerTitleStyle: { fontWeight: 'bold' },
+          headerBackVisible: false,
+          headerBackTitleVisible: false,
         }}
       >
         <Stack.Screen name='home' />

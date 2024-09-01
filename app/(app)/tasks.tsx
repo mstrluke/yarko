@@ -3,7 +3,7 @@ import { router } from 'expo-router';
 
 const data = Array.from({ length: 20 }).flatMap((_idx) => [
   { title: 'Запостить сторис про нас', point: 345 },
-  { title: 'Лайкни хуемое', point: 345 },
+  { title: 'Лайкнуть и репостнуть', point: 345 },
   { title: 'Купить кроссовки', brand: 'puma', point: 345 },
 ])
 
