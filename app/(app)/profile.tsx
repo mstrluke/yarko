@@ -28,8 +28,8 @@ const Profile = () => {
           <Switch />
         </View>
       </View>
-      <Button fullW textClassName='text-white'>Выйти из профиля</Button>
       <Button fullW className='bg-red-500' textClassName='text-white'>Удалить профиль</Button>
+      <Button fullW textClassName='text-white'>Выйти из профиля</Button>
     </View>
   );
 }

@@ -26,6 +26,8 @@ export default function Layout() {
       >
         <Stack.Screen name='home' />
         <Stack.Screen name='network' />
+        <Stack.Screen name='tasks' />
+        <Stack.Screen name='[task]/index' options={{ presentation: 'modal', headerShown: false }} />
         <Stack.Screen name='about' options={{ presentation: 'modal', headerShown: false }} />
         <Stack.Screen name='profile' options={{ presentation: 'modal', headerShown: false }} />
       </Stack>
